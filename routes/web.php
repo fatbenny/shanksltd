@@ -31,8 +31,4 @@ Route::get('/register', function () {
 
 Route::post('/register',[starsController::class, 'register_in']);
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/daily',[starsController::class, 'index']);
