@@ -55,6 +55,17 @@ class starsController extends Controller
             $name = $data->input('Name');
             $email = $data->input('Email');
             $password = $data->input('Password');
+
+
+            if($name == ''){
+                return ['status'=>0,'message'=>'請填寫姓名'];  
+            }
+            if($email == ''){
+                return ['status'=>0,'message'=>'請填寫信箱'];  
+            }
+            if($password == ''){
+                return ['status'=>0,'message'=>'請填寫密碼'];  
+            }
             
             $member = User::where('Email',$email)->count();
 
