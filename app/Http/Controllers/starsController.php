@@ -61,7 +61,7 @@ class starsController extends Controller
                 return ['status'=>0,'message'=>'請填寫姓名'];  
             }
             if($email == ''){
-                return ['status'=>0,'message'=>'請填寫信箱'];  
+                return ['status'=>0,'message'=>'請填寫帳號'];  
             }
             if($password == ''){
                 return ['status'=>0,'message'=>'請填寫密碼'];  
