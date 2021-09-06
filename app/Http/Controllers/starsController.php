@@ -76,6 +76,7 @@ class starsController extends Controller
                     'name'=>$name,
                     'email'=>$email,
                     'password'=>bcrypt($password),
+                    'email_verified_at'=>date('Y-m-d H:i:s'),
                 ]);
             }
             
